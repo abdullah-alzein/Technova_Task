@@ -1,0 +1,103 @@
+/* Result Card Component Styles */
+.result-card {
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.result-card:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.result-card .poster {
+    width: 70px;
+    height: 100px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #0b0c10;
+    margin-right: 20px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.result-card .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.result-card .filter-poster {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: relative;
+}
+
+.result-card .filter-poster::after {
+    content: "No Image";
+    position: absolute;
+    font-size: 0.75rem;
+    color: #aaa;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.result-card .info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-card .heading {
+    max-width: 60%;
+}
+
+.result-card .title {
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.result-card .release-data {
+    font-size: 0.95rem;
+    color: #9aa0a6;
+    margin: 0;
+    font-weight: 400;
+}
+
+.result-card .controls {
+    display: flex;
+    gap: 10px;
+}
+
+.result-card .btn {
+    background-color: #3a86ff;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.result-card .btn:hover:not(:disabled) {
+    background-color: #2575fc;
+    transform: translateY(-1px);
+}
+
+.result-card .btn:disabled {
+    background-color: #4a5568;
+    color: #a0aec0;
+    cursor: not-allowed;
+    opacity: 0.6;
+}

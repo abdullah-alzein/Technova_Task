@@ -1,7 +1,27 @@
-import React from 'react'
+import "./Header.css";
 
-export const Header = () => {
-  return (
-    <div>Header</div>
-  )
-}
+const Header = () => {
+    return (
+        <div className='header'>
+            <div className='container'>
+                <div className='logo'>
+                    <Link to="/">Movies</Link>
+                </div>
+                
+                <ul className='nav-links'>
+                    <li>
+                        <NavLink to="/">watch List </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/watched">watched</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className="btn" to="/add">Add</NavLink>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    );
+};
+
+export default Header;

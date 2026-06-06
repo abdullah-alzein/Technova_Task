@@ -1,0 +1,51 @@
+/* Watchlist View Component Styles */
+.watch-list {
+    padding: 40px 0;
+    background-color: #0b0c10;
+    min-height: calc(100vh - 74px);
+    color: #edf2f4;
+}
+
+.watch-list .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #1c2541;
+    padding-bottom: 15px;
+}
+
+.main-heading h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.movies-count {
+    background-color: #3a86ff;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.no-movies {
+    color: #9aa0a6;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 60px;
+    font-weight: 400;
+}
