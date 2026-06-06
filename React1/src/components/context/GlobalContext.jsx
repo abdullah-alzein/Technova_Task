@@ -26,5 +26,5 @@ const ContextProvider=({children})=>{
 export default ContextProvider;
 
 export const useMovieContext=()=>{
-    return useContext(GlobalContext); 
+    return useContext(GlobalContext)
 }
