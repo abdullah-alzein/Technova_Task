@@ -1,43 +1,45 @@
-import * as actions from "./ActionTypes";
+import * as actions from "./ActionType";
 
-export const reduser=(state,action)=>{
-    switch(action.type){
+export const reduser = (state, action) => {
+    switch (action.type) {
         case actions.ADD_MOVIE_TO_WATCHLIST:
             return {
                 ...state,
-                watchlist:[action.payload,...state.watchlist]
-            }
+                watchlist: [action.payload, ...state.watchlist]
+            };
         
         case actions.REMOVE_MOVIE_FROM_WATCHLIST:
             return {
                 ...state,
-                watchlist:state.watchlist.filter((movie)=>movie.imdbID !== action.payload ),
+                watchlist: state.watchlist.filter((movie) => movie.imdbID !== action.payload),
             };
             
         case actions.MOVIE_TO_WATCHLIST:
             return {
                 ...state,
-                watched:state.watched.filter((movie)=>movie.imdbID !== action.payload.imdbID
-                ),
-                watchlist:[action.payload,...state.watchlist],
+                // Removes the movie from watched list
+                watched: state.watched.filter((movie) => movie.imdbID !== action.payload.imdbID),
+                // Adds it back into the watchlist
+                watchlist: [action.payload, ...state.watchlist],
             };
             
         case actions.ADD_MOVIE_TO_WATCHED:
             return {
                 ...state,
-                watchlist:state.watchlist.filter((movie)=>movie.imdbID !== action.payload.imdbID),
-                watched:[action.payload,...state.watched],
+                // Removes the movie from watchlist when marked as watched
+                watchlist: state.watchlist.filter((movie) => movie.imdbID !== action.payload.imdbID),
+                // Adds it to the watched array
+                watched: [action.payload, ...state.watched],
             };
             
         case actions.REMOVE_MOVIE_FROM_WATCHED:
             return {
                 ...state,
-                watched:state.watched.filter(
-                    (movie)=>movie.imdbID !== action.payload
-                ),
+                // Fixed the trailing 'D' typo here
+                watched: state.watched.filter((movie) => movie.imdbID !== action.payload),
             };
             
-        default :
+        default:
             return state;
     }
-}
+};

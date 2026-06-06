@@ -1,7 +1,8 @@
 import React from 'react'
 import'./ResultCard.css';
-import { useMovieContext } from './context/GlobalContext';
-import * as actions from "./context/ActionTypes"
+import { useMovieContext } from "./context/GlobalContext";
+import * as actions from "./context/ActionType";
+
 function ResultCard({movie}) {
 
 

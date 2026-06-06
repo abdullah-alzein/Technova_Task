@@ -1,6 +1,6 @@
 import React from 'react'
-import './Moviecard.css';
-import Moviecontrol from './Moviecontrol';
+import './Moviescard.css';
+import Moviecontrol from './Moviescontrol';
 function Moviecard({movie,type}) {
   return (
     <div className='movie-card'>

@@ -1,4 +1,3 @@
-/* Card Inline Action Control Overlays */
 .inner-card-controls {
     position: absolute;
     bottom: 20px;
@@ -13,6 +12,7 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 10;
 }
 
 .ctrl-btn {
@@ -35,4 +35,8 @@
 
 .ctrl-btn:hover .fa-times {
     color: #ff0055;
+}
+
+.movie-card:hover .inner-card-controls {
+    opacity: 1;
 }
